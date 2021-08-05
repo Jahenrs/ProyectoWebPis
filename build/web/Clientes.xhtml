@@ -7,7 +7,7 @@
     <h:head>
         <meta charset="utf-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Proveedores</title>
+	<title>Cliente</title>
 	<link href="recursos/css/bootstrap.min.css" rel="stylesheet"/>
 	<link href="recursos/css/font-awesome.min.css" rel="stylesheet"/>
 	<link href="recursos/css/datepicker3.css" rel="stylesheet"/>
@@ -105,8 +105,8 @@
 		</form>
 		<ul class="nav menu">
 			<li><a href="Facturacion.xhtml"><em class="fa fa-dashboard">&nbsp;</em> Facturacion</a></li>
-			<li><a href="Clientes.xhtml"><em class="fa fa-calendar">&nbsp;</em> Clientes</a></li>
-                        <li class="active"><a href="Proveedores.xhtml"><em class="fa fa-bar-chart">&nbsp;</em> Proveedores</a></li>
+                        <li class="active"><a href="Clientes.xhtml"><em class="fa fa-calendar">&nbsp;</em> Clientes</a></li>
+			<li><a href="Proveedores.xhtml"><em class="fa fa-bar-chart">&nbsp;</em> Proveedores</a></li>
 <!--			<li class="active"><a href="Inventario_Consultar.xhtml"><em class="fa fa-toggle-off">&nbsp;</em> Inventario</a></li>-->
                         <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
 				<em class="fa fa-navicon">&nbsp;</em> Inventario <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
@@ -137,13 +137,13 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Proveedores</li>
+				<li class="active">Cliente</li>
 			</ol>
 		</div><!--/.row-->
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Proveedores</h1>
+				<h1 class="page-header">Datos del Cliente</h1>
 			</div>
 		</div><!--/.row-->
                 <!--Empezar a codificar-->
@@ -151,41 +151,57 @@
                 <div class="panel panel-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Nombre de la Empresa:</label>
-                            <p:inputText class="form-control" placeholder="Ingrese el nombre de la empresa"/>
+                            <label>Nombre:</label>
+                            <p:inputText class="form-control" placeholder="Ingrese el Nombre y Apellido"/>
                         </div>
                         <div class="form-group">
-                            <label>Nombre del Vendedor:</label>
-                            <input class="form-control" placeholder="Ingrese el nombre del vendedor"/>
+                            <label>Dirección:</label>
+                            <p:inputText class="form-control" placeholder="Ingrese el dirección"/>
                         </div>
+                        
                         <div class="form-group">
-                            <label>Telefono o Celular:</label>
-                            <input id="txtCel" class="form-control" placeholder="Ingrese el numero" required="true"/>
-                            <h:message for="txtCel"/>
+                            <label>Teléfono:</label>
+                            <p:inputText class="form-control" placeholder="Ingrese el teléfono"/>
                         </div>
                         
+                        <div class="form-group">
+                            <label>R.U.C/C.I:</label>
+                            <p:inputText class="form-control" placeholder="Ingrese el numero de RUC"/>
+                        </div>
                         
+                        <div class="form-group">
+                            <h:commandButton type="button" class="btn btn-lg btn-success" value="Agregar" style="margin: 10px"></h:commandButton>
+                            <h:commandButton type="button" class="btn btn-lg btn-warning" value="Consultar"></h:commandButton>
+                        </div> 
                     </div>
                     
                     <div class="form-group">
-                            <p:dataTable var="pai">
-                                <p:column>
-                                    <f:facet name="header">Proovedor</f:facet>
-                                    <h:outputText value ="prueba nombre"/>
-                                </p:column>
-                                <p:column>
-                                    <f:facet name="header">Vendedor</f:facet>
-                                    <h:outputText value ="Vendedor 1"/>
-                                </p:column>
-                                <p:column>
-                                    <f:facet name="header">Numero</f:facet>
-                                    <h:outputText value ="09547382726"/>
-                                </p:column>
-                                <p:column>
-                                    <f:facet name="header">...</f:facet>
-                                    <h:outputText value ="Borrar"/>
-                                </p:column>
-                            </p:dataTable>
+                            <p:dataTable >
+                <p:column>
+                    <f:facet name="header">
+                       <h:outputText value="Nombres"/>
+                    </f:facet> 
+                    <h:outputLabel value="LblNombres"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                       <h:outputText value="Teléfono"/>
+                    </f:facet> 
+                    <h:outputLabel value="LblTelefonos"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                       <h:outputText value="R.U.C./C.I"/>
+                    </f:facet> 
+                    <h:outputLabel value="LblRuc"/>
+                </p:column>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="...."/>
+                    </f:facet> 
+                    <h:commandButton value="Eliminar" />
+                </p:column>
+            </p:dataTable>
                         </div>
                     
                 </div>

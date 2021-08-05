@@ -106,7 +106,7 @@
 		<ul class="nav menu">
 			<li><a href="Facturacion.xhtml"><em class="fa fa-dashboard">&nbsp;</em> Facturacion</a></li>
 			<li><a href="Clientes.xhtml"><em class="fa fa-calendar">&nbsp;</em> Clientes</a></li>
-                        <li class="active"><a href="Proveedores.xhtml"><em class="fa fa-bar-chart">&nbsp;</em> Proveedores</a></li>
+			<li><a href="Proveedores.xhtml"><em class="fa fa-bar-chart">&nbsp;</em> Proveedores</a></li>
 <!--			<li class="active"><a href="Inventario_Consultar.xhtml"><em class="fa fa-toggle-off">&nbsp;</em> Inventario</a></li>-->
                         <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
 				<em class="fa fa-navicon">&nbsp;</em> Inventario <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
@@ -118,7 +118,7 @@
                                         <li><a class="" href="Inventario_Agregar.xhtml">
 						<span class="fa fa-arrow-right">&nbsp;</span> Agregar
 					</a></li>
-                                        <li><a class="" href="Inventario_Quitar.xhtml">
+                                        <li><a class="active" href="Inventario_Quitar.xhtml">
 						<span class="fa fa-arrow-right">&nbsp;</span> Quitar
 					</a></li>
 					<li><a class="" href="Inventario_Consultar.xhtml">
@@ -137,13 +137,13 @@
 				<li><a href="#">
 					<em class="fa fa-home"></em>
 				</a></li>
-				<li class="active">Proveedores</li>
+				<li class="active">Inventario</li>
 			</ol>
 		</div><!--/.row-->
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Proveedores</h1>
+				<h1 class="page-header">Inventario_Quitar</h1>
 			</div>
 		</div><!--/.row-->
                 <!--Empezar a codificar-->
@@ -151,42 +151,28 @@
                 <div class="panel panel-body">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <label>Nombre de la Empresa:</label>
-                            <p:inputText class="form-control" placeholder="Ingrese el nombre de la empresa"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Nombre del Vendedor:</label>
-                            <input class="form-control" placeholder="Ingrese el nombre del vendedor"/>
-                        </div>
-                        <div class="form-group">
-                            <label>Telefono o Celular:</label>
-                            <input id="txtCel" class="form-control" placeholder="Ingrese el numero" required="true"/>
-                            <h:message for="txtCel"/>
+                            <label>Nombre del Producto:</label><br/>
+                            <p:selectOneMenu>
+                                <f:selectItems value="..." itemLabel="Producto1" itemValue="Producto1"/>
+                            </p:selectOneMenu>
                         </div>
                         
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <p:inputText class="form-control" placeholder="0 = 1000000"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Motivo:</label>
+                            <p:inputTextarea class="form-control" rows="3"/>
+                        </div>
+                        
+                        <div class="form-group">
+                            <h:commandButton type="button" class="btn btn-lg btn-danger" value="Quitar"></h:commandButton>
+                        </div> 
                         
                     </div>
                     
-                    <div class="form-group">
-                            <p:dataTable var="pai">
-                                <p:column>
-                                    <f:facet name="header">Proovedor</f:facet>
-                                    <h:outputText value ="prueba nombre"/>
-                                </p:column>
-                                <p:column>
-                                    <f:facet name="header">Vendedor</f:facet>
-                                    <h:outputText value ="Vendedor 1"/>
-                                </p:column>
-                                <p:column>
-                                    <f:facet name="header">Numero</f:facet>
-                                    <h:outputText value ="09547382726"/>
-                                </p:column>
-                                <p:column>
-                                    <f:facet name="header">...</f:facet>
-                                    <h:outputText value ="Borrar"/>
-                                </p:column>
-                            </p:dataTable>
-                        </div>
                     
                 </div>
                 
