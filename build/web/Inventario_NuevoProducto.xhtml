@@ -153,22 +153,45 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <label>Nombre del producto:</label>
-                            <p:inputText class="form-control" placeholder="Ingrese el nombre del producto"/>
+                            <p:inputText class="form-control" value="#{mbProductos.producto.nombre}" placeholder="Ingrese el nombre del producto"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Cantidad:</label>
+                            <p:inputText class="form-control" value="#{mbProductos.producto.cantidad}" placeholder="Cantidad"/>
                         </div>
                         <div class="form-group">
                             <label>P.Unitario a vender:</label>
-                            <p:inputText class="form-control" placeholder="Precio unitario a vender"/>
+                            <p:inputText class="form-control" value="#{mbProductos.producto.precio}" placeholder="Precio unitario a vender"/>
                         </div>
                         <div class="form-group">
                             <label>Iva:</label>
-                            <p:inputText class="form-control" placeholder="Ingrese Iva"/>
+                            <p:inputText class="form-control" value="#{mbProductos.producto.iva}" placeholder="Ingrese Iva"/>
+                        </div>
+                        <div class="form-group">
+                            <label>Estado:</label>
+                            <p:inputText class="form-control" value="#{mbProductos.producto.estado}" placeholder="1 o 2"/>
                         </div>
                         <div class="form-group">
                             <label>Descripcion:</label>
-                            <p:inputTextarea class="form-control" placeholder="Ingrese descripcion"/>
+                            <p:inputTextarea class="form-control" value="#{mbProductos.producto.descripcion}" placeholder="Ingrese descripcion"/>
                         </div>
                         <div class="form-group">
-                            <h:commandButton type="button" class="btn btn-lg btn-default" value="Agregar"></h:commandButton>
+                            <label>Categoria:</label><br/>
+                            <h:selectOneMenu id="CmbCategoria">
+                                <f:selectItems value="#{mbCategoria.lstCategoria}"  itemValue="#{mbProductos.producto.idCategoria.idCategoria}" itemLabel="#{mbCategoria.nombre}"/>
+                            </h:selectOneMenu> 
+                            
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Proveedor:</label><br/>
+                            <h:selectOneMenu id="CmbProveedor">
+                                <f:selectItems value="#{mbProveedor.lstProveedor}" itemValue="#{mbProductos.producto.idProveedor.idProveedor}" itemLabel="#{mbProveedor.empresa}"/>
+                            </h:selectOneMenu> 
+                            
+                        </div>
+                        <div class="form-group">
+                            <h:commandButton value="Agregar"  class="btn btn-lg btn-default" actionListener="#{mbProductos.crearProducto()}" action="Inventario_NuevoProducto.xhtml" ></h:commandButton>
                         </div>
                     </div>
                     

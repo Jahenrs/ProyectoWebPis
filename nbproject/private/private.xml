@@ -3,7 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/henry/Documents/NetBeansProjects/ProyectPs/web/Catalogo.xhtml</file>
+            <file>file:/C:/Users/henry/Documents/NetBeansProjects/ProyectPs/src/java/ManagedBeans/mbUsusario.java</file>
+            <file>file:/C:/Users/henry/Documents/NetBeansProjects/ProyectPs/web/Inventario_NuevoProducto.xhtml</file>
+            <file>file:/C:/Users/henry/Documents/NetBeansProjects/ProyectPs/src/java/ManagedBeans/mbProductos.java</file>
+            <file>file:/C:/Users/henry/Documents/NetBeansProjects/ProyectPs/web/RegistroUsuario.xhtml</file>
+            <file>file:/C:/Users/henry/Documents/NetBeansProjects/ProyectPs/src/java/Entidades/Proveedor.java</file>
         </group>
     </open-files>
 </project-private>

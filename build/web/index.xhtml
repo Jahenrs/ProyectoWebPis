@@ -22,9 +22,10 @@
 
                   <!-- Login Form -->
                   
-                      <p:inputText type="text" id="login" class="fadeIn second" placeholder="Usuario"/>
-                      <p:password  id="password" class="fadeIn third" placeholder="Contraseña"/>
-                      <h:commandButton  class="fadeIn fourth" value="Entrar" action="Facturacion.xhtml"/>
+                  <p:inputText type="text" id="login" class="fadeIn second" value="#{mbUsusario.usuario}" placeholder="Usuario"/>
+                  <p:password  id="password" class="fadeIn third" value="#{mbUsusario.password}" placeholder="Contraseña"/>
+                      <h:commandButton  class="fadeIn fourth" value="Entrar" action="#{mbUsusario.iniciar()}"/>
+                      <h:commandButton  class="fadeIn fourth" value="Registrarse" action="RegistroUsuario.xhtml"/>
                   
 
 
